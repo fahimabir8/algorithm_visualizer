@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two Nodes with Connection</title>
+  <style>
+    /* Full-screen centered container */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #fafafa;
+    }
+    
+    /* Wrapper for nodes and line */
+    .graph {
+      display: flex;
+      align-items: center;
+
+    }
+
+    /* Node styling */
+    .node {
+      width: 100px;
+      height: 100px;
+      border: 3px solid #333;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      font-family: sans-serif;
+      color: #333;
+      background: #fff;
+    }
+
+    .line {
+      width: 200px;        
+      height: 3px;
+      background: #333;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="graph">
+    <div class="node">0</div>
+    <div class="line"></div>
+    <div class="node">1</div>
+  </div>
+</body>
+</html>
