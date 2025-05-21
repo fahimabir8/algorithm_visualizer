@@ -3,53 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Two Nodes with Connection</title>
-  <style>
-    /* Full-screen centered container */
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: #fafafa;
-    }
-    
-    /* Wrapper for nodes and line */
-    .graph {
-      display: flex;
-      align-items: center;
-
-    }
-
-    /* Node styling */
-    .node {
-      width: 100px;
-      height: 100px;
-      border: 3px solid #333;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 36px;
-      font-family: sans-serif;
-      color: #333;
-      background: #fff;
-    }
-
-    .line {
-      width: 200px;        
-      height: 3px;
-      background: #333;
-      display: block;
-    }
-  </style>
+  <title> Tree</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="graph">
-    <div class="node">0</div>
-    <div class="line"></div>
-    <div class="node">1</div>
-  </div>
+  <button id="reveal-btn">Show Tree</button>
+  <svg width="200" height="200" class="svg-box">
+    <!-- Root node group -->
+    <g id="node0" class="fade">
+      <circle cx="100" cy="40" r="20" class="node-circle" />
+      <text x="100" y="40" class="node-text">0</text>
+    </g>
+
+    <!-- Edge to left child, starts/ends at circle boundaries -->
+    <line id="edge01" x1="88" y1="56" x2="52" y2="104" class="edge fade" />
+    <!-- Left child node -->
+    <g id="node1" class="fade">
+      <circle cx="40" cy="120" r="20" class="node-circle" />
+      <text x="40" y="120" class="node-text">1</text>
+    </g>
+
+    <!-- Edge to right child, adjusted endpoints -->
+    <line id="edge02" x1="112" y1="56" x2="148" y2="104" class="edge fade" />
+    <!-- Right child node -->
+    <g id="node2" class="fade">
+      <circle cx="160" cy="120" r="20" class="node-circle" />
+      <text x="160" y="120" class="node-text">2</text>
+    </g>
+
+    <!-- level 2 starts  -->
+
+      <line id="edge25" x1="170" y1="138" x2="200" y2="182" class="edge fade" />
+       
+    <!-- level 2 right child  -->
+      <g id="node5" class="fade">
+      <circle cx="205" cy="200" r="20" class="node-circle" />
+      <text x="205" y="200" class="node-text">5</text>
+    </g>
+    
+    <!-- node 3 starts  -->
+    <line id="edge13" x1="30" y1="138" x2="0" y2="182" class="edge fade" />
+    
+    <g id="node3" class="fade">
+    <circle cx="0" cy="201" r="20" class="node-circle" />
+    <text x="0" y="201" class="node-text">3</text>
+  </g>
+
+  <!-- node 4  -->
+  <line id="edge14" x1="50" y1="138" x2="85" y2="180" class="edge fade" />
+    
+   <g id="node4" class="fade">
+    <circle cx="90" cy="200" r="20" class="node-circle" />
+    <text x="90" y="200" class="node-text">4</text>
+  </g>
+
+  </svg>
+ 
+
+  <script src="main.js">
+   
+  </script>
 </body>
 </html>
